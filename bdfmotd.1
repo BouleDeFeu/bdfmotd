@@ -1,0 +1,45 @@
+.\" Copyright (c) 2014 Tristan Le Guern <tleguern@bouledef.eu>
+.\"
+.\" Permission to use, copy, modify, and distribute this software for any
+.\" purpose with or without fee is hereby granted, provided that the above
+.\" copyright notice and this permission notice appear in all copies.
+.\"
+.\" THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+.\" WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+.\" MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+.\" ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+.\" WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+.\" ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+.\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+.\"
+.Dd $Mdocdate$
+.Dt BDFMOTD 1
+.Os
+.Sh NAME
+.Nm bdfmotd
+.Nd Generate a figlet art to use in motd
+.Sh SYNOPSIS
+.Nm
+.Op Fl dhV
+.Ar string
+.Sh DESCRIPTION
+The
+.Nm
+utility generates an ASCII art version of the string
+.Ar string
+using
+.Xr figlet 1 .
+It is preconfigured to use the contessa font.
+.Pp
+The options are as follows:
+.Bl -tag -width Ds
+.It Fl d
+Enable debug mode.
+.It Fl h
+Print usage and quit.
+.It Fl V
+Print version and quit.
+.El
+.Sh SEE ALSO
+.Xr figlet 1
+.Xr motd 1
