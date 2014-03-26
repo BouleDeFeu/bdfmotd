@@ -28,16 +28,16 @@ version() {
 	echo "$PROGNAME $VERSION"
 }
 
-while getopts "dhV" opt;do
+while getopts ":dhV" opt;do
 	case $opt in
 		d) set -x;;
 		h) usage; exit 0;;      # NOTREACHED
 		V) version; exit 0;;    # NOTREACHED
-		*) usage; exit 1;;      # NOTREACHED
 		:) echo "$PROGNAME: option requires an argument -- $OPTARG";
 		   usage; exit 1;;      # NOTREACHED
 		?) echo "$PROGNAME: unkown option -- $OPTARG";
 		   usage; exit 1;;      # NOTREACHED
+		*) usage; exit 1;;      # NOTREACHED
 	esac
 done
 shift $(( $OPTIND -1 ))
