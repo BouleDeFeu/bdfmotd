@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Copyright (c) 2014 Tristan Le Guern <tleguern@bouledef.eu>
+# Copyright (c) 2014,2015 Tristan Le Guern <tleguern@bouledef.eu>
 #
 # Permission to use, copy, modify, and distribute this software for any
 # purpose with or without fee is hereby granted, provided that the above
@@ -21,18 +21,15 @@ readonly PROGNAME="`basename $0`"
 readonly VERSION='v1.0'
 
 usage() {
-	echo "usage: $PROGNAME [-dhV] string"
+	echo "usage: $PROGNAME string"
 }
 
 version() {
 	echo "$PROGNAME $VERSION"
 }
 
-while getopts ":dhV" opt;do
+while getopts ":" opt;do
 	case $opt in
-		d) set -x;;
-		h) usage; exit 0;;      # NOTREACHED
-		V) version; exit 0;;    # NOTREACHED
 		:) echo "$PROGNAME: option requires an argument -- $OPTARG";
 		   usage; exit 1;;      # NOTREACHED
 		?) echo "$PROGNAME: unkown option -- $OPTARG";
